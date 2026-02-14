@@ -1,0 +1,336 @@
+{
+  "version": "1.0",
+  "title": "Eastern US Bat Species Acoustic Identification Guide",
+  "lastUpdated": "2025-02-14",
+  "description": "Manual vetting guide for acoustic identification of eastern US bat species",
+  "species": {
+    "LABO": {
+      "code": "LABO",
+      "commonName": "Eastern Red Bat",
+      "scientificName": "Lasiurus borealis"
+    },
+    "NYHU": {
+      "code": "NYHU",
+      "commonName": "Evening Bat",
+      "scientificName": "Nycticeius humeralis"
+    },
+    "PESU": {
+      "code": "PESU",
+      "commonName": "Tricolored Bat",
+      "scientificName": "Perimyotis subflavus"
+    },
+    "MYAU": {
+      "code": "MYAU",
+      "commonName": "Southeastern Myotis",
+      "scientificName": "Myotis austroriparius"
+    },
+    "MYLE": {
+      "code": "MYLE",
+      "commonName": "Eastern Small-footed Myotis",
+      "scientificName": "Myotis leibii"
+    },
+    "MYGR": {
+      "code": "MYGR",
+      "commonName": "Gray Bat",
+      "scientificName": "Myotis grisescens"
+    },
+    "MYSE": {
+      "code": "MYSE",
+      "commonName": "Northern Long-eared Bat",
+      "scientificName": "Myotis septentrionalis"
+    },
+    "MYSO": {
+      "code": "MYSO",
+      "commonName": "Indiana Bat",
+      "scientificName": "Myotis sodalis"
+    },
+    "MYLU": {
+      "code": "MYLU",
+      "commonName": "Little Brown Bat",
+      "scientificName": "Myotis lucifugus"
+    }
+  },
+  "results": {
+    "STOP": {
+      "type": "stop",
+      "message": "Call quality insufficient for species identification"
+    },
+    "UNIDENTIFIED_40K": {
+      "type": "unidentified",
+      "message": "Unidentified 40k Myotis - call may not be identifiable to species"
+    },
+    "NON_TARGET": {
+      "type": "non-target",
+      "message": "Non-target species"
+    },
+    "MYAU_MYLE": {
+      "type": "ambiguous",
+      "message": "Either MYAU (Southeastern Myotis) or MYLE (Eastern Small-footed Myotis) - requires additional analysis"
+    },
+    "SOCIAL_CALL": {
+      "type": "social",
+      "message": "Social Call - not a search phase call"
+    },
+    "NOT_DETERMINED": {
+      "type": "undetermined",
+      "message": "Species not determined, try again!"
+    }
+  },
+  "steps": {
+    "1": {
+      "question": "Does the call have five or more pulses?",
+      "sonogram": "1.svg",
+      "type": "yes-no",
+      "options": {
+        "no": "STOP",
+        "yes": "2"
+      }
+    },
+    "2": {
+      "question": "Are at least 5 to 10 pulses within the call sequence distributed fairly evenly?",
+      "sonogram": "2.svg",
+      "type": "yes-no",
+      "options": {
+        "no": "STOP",
+        "yes": "3"
+      }
+    },
+    "3": {
+      "question": "Are these pulses distributed about 0.1 seconds or more apart?",
+      "sonogram": "3.svg",
+      "type": "yes-no",
+      "options": {
+        "no": "STOP",
+        "yes": "4"
+      }
+    },
+    "4": {
+      "question": "Are the individual pulses of good quality?",
+      "sonogram": "4.svg",
+      "type": "yes-no",
+      "options": {
+        "no": "STOP",
+        "yes": "5"
+      }
+    },
+    "5": {
+      "question": "Is the call from only one bat?",
+      "sonogram": "5.svg",
+      "type": "yes-no",
+      "options": {
+        "no": "STOP",
+        "yes": "6"
+      }
+    },
+    "6": {
+      "question": "Is the call very obviously bouncy and inconsistent?",
+      "sonogram": "6.svg",
+      "type": "yes-no",
+      "options": {
+        "yes": "LABO",
+        "no": "7"
+      }
+    },
+    "7": {
+      "question": "Are search phase pulses reverse \"J\"-shaped without strong tails?",
+      "sonogram": "7.svg",
+      "type": "yes-no",
+      "options": {
+        "yes": "9",
+        "no": "20"
+      }
+    },
+    "9": {
+      "question": "Does Fmin stay above 38 kHz?",
+      "sonogram": "9.svg",
+      "section": "Reverse J Path",
+      "type": "yes-no",
+      "options": {
+        "yes": "10",
+        "no": "NYHU"
+      }
+    },
+    "10": {
+      "question": "Is Fmin steady across the majority of pulses?",
+      "sonogram": "10.svg",
+      "section": "Reverse J Path",
+      "type": "yes-no",
+      "options": {
+        "yes": "11",
+        "no": "NYHU"
+      }
+    },
+    "11": {
+      "question": "Are the calls distinctly hockey-stick shaped?",
+      "sonogram": "11.svg",
+      "section": "Reverse J Path",
+      "type": "yes-no",
+      "options": {
+        "yes": "PESU",
+        "no": "NYHU"
+      }
+    },
+    "20": {
+      "question": "Are pulses sigmoidal with distinct tails?",
+      "sonogram": "20.svg",
+      "section": "Non Reverse J Path",
+      "type": "yes-no",
+      "options": {
+        "yes": "21",
+        "no": "40"
+      }
+    },
+    "21": {
+      "question": "Do pulses have steady Fc values with strong tails observed throughout search phase portions of the call?",
+      "sonogram": "21.svg",
+      "section": "Myotis Path",
+      "type": "yes-no",
+      "options": {
+        "no": "22",
+        "yes": "23"
+      }
+    },
+    "22": {
+      "question": "This may be a Myotis, but it might not be identifiable to species. Only high quality calls should be further analyzed, would you like to continue?",
+      "sonogram": "22.svg",
+      "section": "Myotis Path",
+      "type": "yes-no",
+      "options": {
+        "no": "UNIDENTIFIED_40K",
+        "yes": "23"
+      }
+    },
+    "23": {
+      "question": "What is the Average Fc value for the call?",
+      "sonogram": "23.svg",
+      "section": "Myotis Path",
+      "type": "multiple-choice",
+      "options": {
+        "Less than 42 kHz": "25",
+        "Greater than 42 kHz": "30"
+      }
+    },
+    "25": {
+      "question": "How long in duration are the search phase pulses?",
+      "sonogram": "25.svg",
+      "section": "Myotis Path",
+      "type": "multiple-choice",
+      "options": {
+        "Greater than 7 ms": "60",
+        "5ms - 6ms": "26",
+        "Less than 5 ms": "31"
+      }
+    },
+    "26": {
+      "question": "Is there a strong 'basket' shape visible before the tail of each pulse?",
+      "sonogram": "26.svg",
+      "section": "Myotis Path",
+      "type": "yes-no",
+      "options": {
+        "yes": "MYAU_MYLE",
+        "no": "60"
+      }
+    },
+    "30": {
+      "question": "Are the pulses very inflected or mostly smooth?",
+      "sonogram": "30.svg",
+      "section": "Myotis Path - High Fc Value",
+      "type": "multiple-choice",
+      "options": {
+        "Very inflected": "MYGR",
+        "Mostly smooth": "31"
+      }
+    },
+    "31": {
+      "question": "In portions of the call with good pulse spacing, is the call very high bandwidth (>75kHz)?",
+      "sonogram": "31.svg",
+      "section": "Myotis Path",
+      "type": "multiple-choice",
+      "options": {
+        "Yes, calls are steep and very high bandwidth": "60",
+        "No, calls are not very high bandwidth": "MYAU_MYLE"
+      }
+    },
+    "40": {
+      "question": "Are pulses very flat with low slope?",
+      "sonogram": "40.svg",
+      "section": "Non-Myotis Path",
+      "type": "yes-no",
+      "options": {
+        "yes": "41",
+        "no": "50"
+      }
+    },
+    "41": {
+      "question": "Is Fmin greater than 38 kHz?",
+      "sonogram": "41.svg",
+      "section": "Non-Myotis Path",
+      "type": "yes-no",
+      "options": {
+        "yes": "PESU",
+        "no": "NON_TARGET"
+      }
+    },
+    "50": {
+      "question": "Are pulses very steep straight lines?",
+      "sonogram": "50.svg",
+      "section": "Steep Line Path",
+      "type": "yes-no",
+      "options": {
+        "yes": "51",
+        "no": "70"
+      }
+    },
+    "51": {
+      "question": "Are pulses very bouncy and inconsistent?",
+      "sonogram": "51.svg",
+      "section": "Steep Line Path",
+      "type": "yes-no",
+      "options": {
+        "yes": "LABO",
+        "no": "52"
+      }
+    },
+    "52": {
+      "question": "Are pulses very high bandwidth (>75 kHz)?",
+      "sonogram": "52.svg",
+      "section": "Steep Line Path",
+      "type": "yes-no",
+      "options": {
+        "yes": "61",
+        "no": "NON_TARGET"
+      }
+    },
+    "60": {
+      "question": "In AnalookW, what is the slope value?",
+      "sonogram": "60.svg",
+      "section": "AnalookW Slope Check",
+      "type": "multiple-choice",
+      "options": {
+        "Slope > 180": "MYSE",
+        "100 < Slope < 120": "MYSO",
+        "Slope < 100": "MYLU"
+      }
+    },
+    "61": {
+      "question": "In AnalookW, what is the slope value?",
+      "sonogram": "61.svg",
+      "section": "AnalookW Slope Check",
+      "type": "multiple-choice",
+      "options": {
+        "Slope > 180": "MYSE",
+        "Slope < 180": "NOT_DETERMINED"
+      }
+    },
+    "70": {
+      "question": "Is the call made up of a variety of pulse shapes and frequencies?",
+      "sonogram": "70.svg",
+      "type": "yes-no",
+      "options": {
+        "yes": "SOCIAL_CALL",
+        "no": "NOT_DETERMINED"
+      }
+    }
+  },
+  "startStep": "1"
+}
