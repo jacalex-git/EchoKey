@@ -7,47 +7,56 @@
     "LABO": {
       "code": "LABO",
       "commonName": "Eastern Red Bat",
-      "scientificName": "Lasiurus borealis"
+      "scientificName": "Lasiurus borealis",
+      "sonogram": "LABO.svg"
     },
     "NYHU": {
       "code": "NYHU",
       "commonName": "Evening Bat",
-      "scientificName": "Nycticeius humeralis"
+      "scientificName": "Nycticeius humeralis",
+      "sonogram": "NYHU.svg"
     },
     "PESU": {
       "code": "PESU",
       "commonName": "Tricolored Bat",
-      "scientificName": "Perimyotis subflavus"
+      "scientificName": "Perimyotis subflavus",
+      "sonogram": "PESU.svg"
     },
     "MYAU": {
       "code": "MYAU",
       "commonName": "Southeastern Myotis",
-      "scientificName": "Myotis austroriparius"
+      "scientificName": "Myotis austroriparius",
+      "sonogram": "MYAU.svg"
     },
     "MYLE": {
       "code": "MYLE",
       "commonName": "Eastern Small-footed Myotis",
-      "scientificName": "Myotis leibii"
+      "scientificName": "Myotis leibii",
+      "sonogram": "MYLE.svg"
     },
     "MYGR": {
       "code": "MYGR",
       "commonName": "Gray Bat",
-      "scientificName": "Myotis grisescens"
+      "scientificName": "Myotis grisescens",
+      "sonogram": "MYGR.svg"
     },
     "MYSE": {
       "code": "MYSE",
       "commonName": "Northern Long-eared Bat",
-      "scientificName": "Myotis septentrionalis"
+      "scientificName": "Myotis septentrionalis",
+      "sonogram": "MYSE.svg"
     },
     "MYSO": {
       "code": "MYSO",
       "commonName": "Indiana Bat",
-      "scientificName": "Myotis sodalis"
+      "scientificName": "Myotis sodalis",
+      "sonogram": "MYSO.svg"
     },
     "MYLU": {
       "code": "MYLU",
       "commonName": "Little Brown Bat",
-      "scientificName": "Myotis lucifugus"
+      "scientificName": "Myotis lucifugus",
+      "sonogram": "MYLU.svg"
     }
   },
   "results": {
@@ -333,4 +342,3 @@
     }
   },
   "startStep": "1"
-}
