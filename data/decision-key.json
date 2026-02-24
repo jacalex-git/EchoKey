@@ -10,12 +10,6 @@
       "scientificName": "Lasiurus borealis",
       "sonogram": "LABO.svg"
     },
-    "UNIDENTIFIED_40K": {
-    "code": "UNIDENTIFIED_40K",
-    "commonName": "Unidentified 40k Myotis",
-    "scientificName": "Call may not be identifiable to species",
-    "sonogram": "40kmyotis.svg"
-    },
     "NYHU": {
       "code": "NYHU",
       "commonName": "Evening Bat",
@@ -63,6 +57,12 @@
       "commonName": "Little Brown Bat",
       "scientificName": "Myotis lucifugus",
       "sonogram": "MYLU.svg"
+    },
+    "UNIDENTIFIED_40K": {
+      "code": "UNIDENTIFIED_40K",
+      "commonName": "Unidentified 40k Myotis",
+      "scientificName": "Call may not be identifiable to species",
+      "sonogram": "UNIDENTIFIED_40K.svg"
     }
   },
   "results": {
