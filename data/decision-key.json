@@ -149,7 +149,7 @@
       "options": {
         "Yes": "10",
         "No, accept non-target": "NON_TARGET",
-        "No, continue manual review": "6c"
+        "No, continue manual review": "6c"}
     },
     "10": {
       "question": "Is Fmin steady across most pulses?",
