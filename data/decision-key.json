@@ -170,6 +170,7 @@
       "question": "Only high quality Myotis calls should proceed. Continue?",
       "sonogram": "22.svg",
       "type": "yes-no",
+      "noteTrigger": "yes",
       "note": "Only high quality Myotis calls should be identified to species.",
       "options": { "no": "UNIDENTIFIED_40K", "yes": "23" }
     },
