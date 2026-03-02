@@ -147,9 +147,15 @@
       "question": "Does Fmin stay above 38 kHz?",
       "sonogram": "9.svg",
       "type": "yes-no",
-      "options": { "yes": "10", "no": "6c" }
+      "options": { "yes": "10", "no": "9b" }
     },
-    
+     "9b": {
+      "question": "This call sequence Fmin is too low for it to be a target species. Would you like to continue?",
+      "type": "multiple-choice",
+      "options": {
+        "Yes, continue manual review": "6c",
+        "No, accept non-target": "NON_TARGET"
+    },
     "10": {
       "question": "Is Fmin steady across most pulses?",
       "sonogram": "10.svg",
