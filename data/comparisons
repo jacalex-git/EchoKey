@@ -1,0 +1,111 @@
+{
+  "version": "1.1",
+  "description": "Visual similarity and confusion-risk comparison layer for EchoKey v2",
+
+  "comparisons": {
+
+    "MYGR": {
+      "similarTo": ["MYSO", "MYSE", "PESU"],
+      "confusionRisk": "high",
+      "whenToCompare": "High Fc Myotis with inflection (Step 30 or 60)",
+      "diagnosticNotes": [
+        "Strong inflection around 45–50 kHz with pronounced knee, heel, and toe",
+        "Often exhibits terminal hook at end of pulse",
+        "May resemble PESU in steep broadband examples",
+        "Slope alone should not override inflection pattern"
+      ]
+    },
+
+    "MYSO": {
+      "similarTo": ["MYSE", "MYGR", "MYLU"],
+      "confusionRisk": "high",
+      "whenToCompare": "Slope between 100–200 in Step 60",
+      "diagnosticNotes": [
+        "Minimum slope typically between 100–200",
+        "Inflection less dramatic than MYGR",
+        "May resemble MYLU when bandwidth is reduced"
+      ]
+    },
+
+    "MYSE": {
+      "similarTo": ["MYSO", "MYGR", "MYAU", "MYLE"],
+      "confusionRisk": "high",
+      "whenToCompare": "Slope > 200 in Step 60 or steep broadband Myotis",
+      "diagnosticNotes": [
+        "Minimum slope greater than 200 per USFWS 2024 guidance",
+        "Typically steeper and cleaner than MYSO",
+        "Can resemble MYAU or MYLE when basket shape is weak",
+        "Geographic range and Fc context important"
+      ]
+    },
+
+    "MYLU": {
+      "similarTo": ["MYSO"],
+      "confusionRisk": "moderate",
+      "whenToCompare": "Slope < 100 in Step 60",
+      "diagnosticNotes": [
+        "Minimum slope less than 100",
+        "Generally smoother pulse shape",
+        "Can resemble MYSO in degraded recordings"
+      ]
+    },
+
+    "MYAU": {
+      "similarTo": ["MYLE", "MYSE"],
+      "confusionRisk": "moderate",
+      "whenToCompare": "Basket shape present in low Fc pathway (Step 26/33)",
+      "diagnosticNotes": [
+        "Basket-shaped curvature before tail",
+        "Geographic range critical for separation from MYLE",
+        "May resemble MYSE if slope appears elevated",
+        "Fc typically below 42 kHz"
+      ]
+    },
+
+    "MYLE": {
+      "similarTo": ["MYAU", "MYSE"],
+      "confusionRisk": "moderate",
+      "whenToCompare": "Basket shape present and overlap zone in Step 33",
+      "diagnosticNotes": [
+        "Shorter duration pulses than MYAU in some regions",
+        "Range separation often diagnostic",
+        "May resemble MYSE if slope exceeds expected values"
+      ]
+    },
+
+    "PESU": {
+      "similarTo": ["NYHU", "MYGR"],
+      "confusionRisk": "moderate",
+      "whenToCompare": "Reverse-J path with hockey-stick shape (Step 11)",
+      "diagnosticNotes": [
+        "Distinct hockey-stick shaped pulse",
+        "Fmin typically above 38 kHz",
+        "May resemble MYGR in steep broadband examples",
+        "MYGR will show stronger inflection and different slope behavior"
+      ]
+    },
+
+    "NYHU": {
+      "similarTo": ["PESU"],
+      "confusionRisk": "low",
+      "whenToCompare": "Reverse-J path with lower Fmin (Step 9–11)",
+      "diagnosticNotes": [
+        "Less dramatic hockey-stick shape than PESU",
+        "Fmin may drop below 38 kHz",
+        "Smoother curvature overall"
+      ]
+    },
+
+    "LABO": {
+      "similarTo": ["MYGR", "MYSO"],
+      "confusionRisk": "context-dependent",
+      "whenToCompare": "Steep broadband variant or bouncy high-frequency calls (Steps 6b, 34, 51)",
+      "diagnosticNotes": [
+        "Highly variable timing between pulses",
+        "Bouncy Fmin behavior",
+        "Broadband steep calls may resemble high Fc Myotis"
+      ]
+    }
+
+  }
+}
