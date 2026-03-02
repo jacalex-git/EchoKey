@@ -168,7 +168,7 @@
         "yes": "23",
         "no, but continue identification": "23",
         "no, stop here": "UNIDENTIFIED_40K"
-      }
+      },
       "noteTrigger": "no, but continue identification",
       "note": "Only high quality Myotis calls should be identified to species.",
     },
