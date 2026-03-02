@@ -60,77 +60,94 @@
     }
   },
   "results": {
-    "STOP": { "type": "stop", "message": "Call quality insufficient for species identification" },
-    "NON_TARGET": { "type": "non-target", "message": "Non-target species" },
-    "UNKNOWN": { "type": "unknown", "message": "Unknown Bat" },
-    "UNIDENTIFIED_40K": { "type": "group", "message": "Unidentified 40 kHz Myotis" },
-    "SOCIAL_CALL": { "type": "social", "message": "Social Call" },
-    "MYAU_MYLE": { "type": "group", "message": "MYAU or MYLE (range overlap)" }
+    "STOP": {
+      "type": "stop",
+      "message": "Call quality insufficient for species identification"
+    },
+    "NON_TARGET": {
+      "type": "non-target",
+      "message": "Non-target species"
+    },
+    "UNKNOWN": {
+      "type": "unknown",
+      "message": "Unknown Bat"
+    },
+    "UNIDENTIFIED_40K": {
+      "type": "group",
+      "message": "Unidentified 40 kHz Myotis"
+    },
+    "SOCIAL_CALL": {
+      "type": "social",
+      "message": "Social Call"
+    },
+    "MYAU_MYLE": {
+      "type": "group",
+      "message": "MYAU or MYLE (range overlap)"
+    }
   },
   "steps": {
     "1": {
       "question": "Does the call sequence have five or more pulses?",
       "sonogram": "1.svg",
       "type": "yes-no",
-      "options": { "no": "STOP", "yes": "2" }
+      "options": {
+        "no": "STOP",
+        "yes": "2"
+      }
     },
     "2": {
       "question": "Are at least 5 to 10 pulses distributed fairly evenly?",
       "sonogram": "2.svg",
       "type": "yes-no",
-      "options": { "no": "STOP", "yes": "3" }
+      "options": {
+        "no": "STOP",
+        "yes": "3"
+      }
     },
     "3": {
       "question": "Are there generally fewer than 12 pulses per second? Pulses of interest should not accelerate into a feeding buzz.",
       "sonogram": "3.svg",
       "type": "yes-no",
-      "options": { "no": "STOP", "yes": "4" }
+      "options": {
+        "no": "STOP",
+        "yes": "4"
+      }
     },
     "4": {
       "question": "Are the individual pulses of good quality?",
       "sonogram": "4.svg",
       "type": "yes-no",
-      "options": { "no": "STOP", "yes": "4b" }
-    },
-    "4b": {
-      "question": "Are harmonics visible in the recording?",
-      "sonogram": "4b.svg",
-      "type": "yes-no",
-      "note": "Files without harmonics proceed with reduced confidence.",
-      "options": { "no": "5", "yes": "5" }
+      "options": {
+        "no": "STOP",
+        "yes": "4b"
+      }
     },
     "5": {
       "question": "Is the call from only one bat?",
       "sonogram": "5.svg",
       "type": "yes-no",
-      "options": { "no": "STOP", "yes": "6" }
+      "options": {
+        "no": "STOP",
+        "yes": "6"
+      }
     },
     "6": {
       "question": "Is the call very obviously bouncy and inconsistent?",
       "sonogram": "6.svg",
       "type": "yes-no",
-      "options": { "yes": "6b", "no": "7" }
-    },
-    "6b": {
-      "question": "Is the Fmin of the bouncy call above 35 kHz?",
-      "sonogram": "6b.svg",
-      "type": "multiple-choice",
       "options": {
-        "Yes": "LABO",
-        "No, accept non-target": "NON_TARGET",
-        "No, continue manual review": "6c"
+        "yes": "6b",
+        "no": "7"
       }
-    },
-    "6c": {
-      "question": "This portion of the key is under construction.",
-      "type": "info",
-      "next": "7"
     },
     "7": {
       "question": "Are search phase pulses reverse J-shaped without strong tails?",
       "sonogram": "7.svg",
       "type": "yes-no",
-      "options": { "yes": "9", "no": "20" }
+      "options": {
+        "yes": "9",
+        "no": "20"
+      }
     },
     "9": {
       "question": "Is Fmin consistently greater than 38 kHz?",
@@ -146,19 +163,28 @@
       "question": "Is Fmin steady across most pulses?",
       "sonogram": "10.svg",
       "type": "yes-no",
-      "options": { "yes": "11", "no": "NYHU" }
+      "options": {
+        "yes": "11",
+        "no": "NYHU"
+      }
     },
     "11": {
       "question": "Are the calls distinctly hockey-stick shaped?",
       "sonogram": "11.svg",
       "type": "yes-no",
-      "options": { "yes": "PESU", "no": "NYHU" }
+      "options": {
+        "yes": "PESU",
+        "no": "NYHU"
+      }
     },
     "20": {
       "question": "Are pulses sigmoidal with distinct tails?",
       "sonogram": "20.svg",
       "type": "yes-no",
-      "options": { "yes": "22", "no": "40" }
+      "options": {
+        "yes": "22",
+        "no": "40"
+      }
     },
     "22": {
       "question": "Does this appear to be a high quality Myotis call with steady Fc values and strong tails?",
@@ -170,7 +196,7 @@
         "no, stop here": "UNIDENTIFIED_40K"
       },
       "noteTrigger": "no, but continue identification",
-      "note": "Only high quality Myotis calls should be identified to species.",
+      "note": "Only high quality Myotis calls should be identified to species."
     },
     "23": {
       "question": "What is the average Fc value?",
@@ -195,7 +221,10 @@
       "question": "Is there a strong basket shape before the tail?",
       "sonogram": "26.svg",
       "type": "yes-no",
-      "options": { "yes": "33", "no": "60" }
+      "options": {
+        "yes": "33",
+        "no": "60"
+      }
     },
     "30": {
       "question": "Are pulses strongly inflected (knee/heel/toe) around 45-52 kHz?",
@@ -210,12 +239,18 @@
       "question": "Is there a strong basket shape before the tail?",
       "sonogram": "26.svg",
       "type": "yes-no",
-      "options": { "yes": "33", "no": "32" }
+      "options": {
+        "yes": "33",
+        "no": "32"
+      }
     },
     "32": {
       "question": "Is the call very high bandwidth (>75 kHz)?",
       "type": "yes-no",
-      "options": { "yes": "60", "no": "34" }
+      "options": {
+        "yes": "60",
+        "no": "34"
+      }
     },
     "33": {
       "question": "Was the call collected in known range of MYAU, MYLE, or both?",
@@ -240,7 +275,10 @@
       "question": "Are pulses very flat with low slope?",
       "sonogram": "40.svg",
       "type": "yes-no",
-      "options": { "yes": "41", "no": "50" }
+      "options": {
+        "yes": "41",
+        "no": "50"
+      }
     },
     "41": {
       "question": "Is Fmin greater than 38 kHz?",
@@ -254,7 +292,10 @@
     "50": {
       "question": "Are pulses very steep straight lines?",
       "type": "yes-no",
-      "options": { "yes": "51", "no": "70" }
+      "options": {
+        "yes": "51",
+        "no": "70"
+      }
     },
     "51": {
       "question": "Are pulses very bouncy and inconsistent?",
@@ -267,7 +308,10 @@
     "52": {
       "question": "Are pulses very high bandwidth (>75 kHz)?",
       "type": "yes-no",
-      "options": { "yes": "60", "no": "34" }
+      "options": {
+        "yes": "60",
+        "no": "34"
+      }
     },
     "60": {
       "question": "In AnalookW, what is the minimum slope value?",
@@ -282,7 +326,35 @@
     "70": {
       "question": "Is the call composed of varied pulse shapes and frequencies?",
       "type": "yes-no",
-      "options": { "yes": "SOCIAL_CALL", "no": "UNKNOWN" }
+      "options": {
+        "yes": "SOCIAL_CALL",
+        "no": "UNKNOWN"
+      }
+    },
+    "4b": {
+      "question": "Are harmonics visible in the recording?",
+      "sonogram": "4b.svg",
+      "type": "yes-no",
+      "note": "Files without harmonics proceed with reduced confidence.",
+      "options": {
+        "no": "5",
+        "yes": "5"
+      }
+    },
+    "6b": {
+      "question": "Is the Fmin of the bouncy call above 35 kHz?",
+      "sonogram": "6b.svg",
+      "type": "multiple-choice",
+      "options": {
+        "Yes": "LABO",
+        "No, accept non-target": "NON_TARGET",
+        "No, continue manual review": "6c"
+      }
+    },
+    "6c": {
+      "question": "This portion of the key is under construction.",
+      "type": "info",
+      "next": "7"
     }
   },
   "startStep": "1"
