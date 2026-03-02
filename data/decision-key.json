@@ -158,21 +158,19 @@
       "question": "Are pulses sigmoidal with distinct tails?",
       "sonogram": "20.svg",
       "type": "yes-no",
-      "options": { "yes": "21", "no": "40" }
-    },
-    "21": {
-      "question": "Do pulses have steady Fc values with strong tails?",
-      "sonogram": "21.svg",
-      "type": "yes-no",
-      "options": { "no": "22", "yes": "23" }
+      "options": { "yes": "22", "no": "40" }
     },
     "22": {
-      "question": "Only high quality Myotis calls should proceed. Continue?",
+      "question": "Does this appear to be a high quality Myotis call with steady Fc values and strong tails?",
       "sonogram": "22.svg",
-      "type": "yes-no",
-      "noteTrigger": "yes",
+      "type": "multiple-choice",
+      "options": {
+        "yes": "23",
+        "no, but continue identification": "23",
+        "no, stop here": "UNIDENTIFIED_40K"
+      }
+      "noteTrigger": "no, but continue identification",
       "note": "Only high quality Myotis calls should be identified to species.",
-      "options": { "no": "UNIDENTIFIED_40K", "yes": "23" }
     },
     "23": {
       "question": "What is the average Fc value?",
