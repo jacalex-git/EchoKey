@@ -271,6 +271,7 @@
     },
     "60": {
       "question": "In AnalookW, what is the minimum slope value?",
+      "sonogram": "Analook_OPS.svg",
       "type": "multiple-choice",
       "options": {
         "Slope > 200": "MYSE",
