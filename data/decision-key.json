@@ -170,6 +170,7 @@
       "question": "Only high quality Myotis calls should proceed. Continue?",
       "sonogram": "22.svg",
       "type": "yes-no",
+      "note": "Only high quality Myotis calls should be identified to species.",
       "options": { "no": "UNIDENTIFIED_40K", "yes": "23" }
     },
     "23": {
@@ -219,7 +220,7 @@
     },
     "33": {
       "question": "Was the call collected in known range of MYAU, MYLE, or both?",
-      "sonogram": "MYAU_MYLE.svg",
+      "sonogram": "Range_MYAU_MYLE.svg",
       "type": "multiple-choice",
       "options": {
         "MYAU range only": "MYAU",
