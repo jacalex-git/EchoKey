@@ -147,9 +147,9 @@
       "question": "Does Fmin stay above 38 kHz?",
       "sonogram": "9.svg",
       "type": "yes-no",
-      "options": { "yes": "10", "no": "NYHU" }
+      "options": { "yes": "10", "no": "6c" }
     },
-
+    
     "10": {
       "question": "Is Fmin steady across most pulses?",
       "sonogram": "10.svg",
