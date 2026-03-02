@@ -84,7 +84,7 @@
     },
 
     "3": {
-      "question": "Are there generally fewer than 12 pulses per second, and are pulses without acceleration into a feeding buzz?",
+      "question": "Are there generally fewer than 12 pulses per second (pulses should not accelerate into a feeding buzz)?",
       "sonogram": "3.svg",
       "type": "yes-no",
       "options": { "no": "STOP", "yes": "4" }
