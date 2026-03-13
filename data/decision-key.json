@@ -83,6 +83,10 @@
     "MYAU_MYLE": {
       "type": "group",
       "message": "MYAU or MYLE (range overlap)"
+    },
+    "CORA_COTO": {
+      "type": "group",
+      "message": "Big-eared Bat (Corynorhinus rafinesquii or Corynorhinus townsendii)"
     }
   },
   "steps": {
@@ -271,6 +275,23 @@
         "No, steady timing (~100 ms)": "60"
       }
     },
+    "34b": {
+      "question": "Could this be Eastern Red / Seminole Bat (steep variant)?",
+      "sonogram": "LABO.svg",
+      "type": "multiple-choice",
+      "options": {
+        "Yes, bouncing and variable timing": "LABO",
+        "No, steady timing (~100 ms)": "35"
+      }
+    },
+    "35": {
+      "question": "Is this possibly a big-eared bat call?",
+      "type": "yes-no",
+      "options": {
+        "yes": "CORA_COTO",
+        "no": "UNKNOWN"
+      }
+    },
     "40": {
       "question": "Are pulses very flat with low slope?",
       "sonogram": "40.svg",
@@ -310,7 +331,7 @@
       "type": "yes-no",
       "options": {
         "yes": "60",
-        "no": "34"
+        "no": "34b"
       }
     },
     "60": {
